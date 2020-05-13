@@ -1,0 +1,59 @@
+@include mediaXl {
+    .work-content {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@include mediaLg {
+    .work-content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@include mediaMd {
+    main {
+        align-items: center;
+        text-align: center;
+
+        .lg-heading {
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+    }
+    .links, .brand {
+        float: none !important;
+        width: 100% !important;
+        min-height: 0 !important;
+
+        &.show {
+            transform: translate3d(0, 0, 0) !important;
+        }
+    }
+    .links {
+        height: 60vh !important;
+        transform: translate3d(-100%, 0, 0) !important;
+        font-size: 20px !important;
+    }
+    .brand {
+        height: 40vh !important;
+        transform: translate3d(100%, 0, 0) !important;
+    }
+    .about-content {
+        grid-template-areas: 
+        'bioimg'
+        'bio'
+        'job1'
+        'job2'
+        'job3';
+        grid-template-columns: 1fr;
+    }
+    .work-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@include mediaSm {
+    main#home h1 {
+        margin-top: 10vh;
+    }
+    .work-content {
+        grid-template-columns: 1fr;
+    }
+}
